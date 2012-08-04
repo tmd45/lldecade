@@ -13,6 +13,7 @@ public class TestLlnocAnalyze {
 		String str = la.getAnalyzedSentence(file);
 
 		System.out.println("RESULT > " + str);
+		System.out.println("URI    > " + str.toLowerCase());
 	}
 
 }

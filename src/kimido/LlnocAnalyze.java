@@ -10,6 +10,10 @@ import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * https://github.com/tmd45/lldecade
+ * @author tmd45
+ */
 public class LlnocAnalyze {
 
 	/**
@@ -140,8 +144,10 @@ public class LlnocAnalyze {
 		{
 			try
 			{
-				Short num = Short.valueOf(splited[i]);
-				if(num < 0 || num >= 255) return false;
+				String numStr = splited[i];
+				if(numStr.charAt(0) == '0') return false;
+				Short num = Short.valueOf(numStr);
+				if(num < 0 || num > 255) return false;
 			}
 			catch(Exception e)
 			{
