@@ -145,7 +145,7 @@ public class LlnocAnalyze {
 			try
 			{
 				String numStr = splited[i];
-				if(numStr.charAt(0) == '0') return false;
+				if(numStr.length() > 2 && numStr.charAt(0) == '0') return false;
 				Short num = Short.valueOf(numStr);
 				if(num < 0 || num > 255) return false;
 			}
